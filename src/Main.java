@@ -25,6 +25,9 @@ public class Main {
 		double porcentajeDeCasos2 = 0;
 		double porcentajeDeCasos3 = 0;
 
+		double restanEmpleados2 = 0;
+		double restanEmpleados3 = 0;
+
 		double casosGenerales = 0;
 
 		double temperatura = 0;
@@ -39,12 +42,12 @@ public class Main {
 		System.out.println(
 				"Ingrese cantidad de empleados sector 2 recuerde quen no puede ser mayor a " + restanEmpleados + " :");
 		totalDeEmpleadosSector2 = scan.nextInt();
-		restanEmpleados = (restanEmpleados - totalDeEmpleadosSector2);
+		restanEmpleados2 = (restanEmpleados - totalDeEmpleadosSector2);
 
 		System.out.println(
-				"Ingrese cantidad de empleados sector 3 recuerde quen no puede ser mayor a " + restanEmpleados + " :");
+				"Ingrese cantidad de empleados sector 3 recuerde quen no puede ser mayor a " + restanEmpleados2 + " :");
 		totalDeEmpleadosSector3 = scan.nextInt();
-		restanEmpleados = (restanEmpleados - totalDeEmpleadosSector3);
+		restanEmpleados3 = (restanEmpleados3 - totalDeEmpleadosSector3);
 
 		for (int i = 1; i <= 3; i++) {
 
@@ -77,10 +80,6 @@ public class Main {
 				break;
 			case 2: {
 
-				System.out.println("Cantidad de empleados?: ");
-
-				totalDeEmpleadosSector2 = scan.nextInt();
-
 				for (int j = 0; j <= totalDeEmpleadosSector2; j++) {
 
 					temperatura = ((Math.random() * (40 - 35)) + 35);
@@ -94,15 +93,11 @@ public class Main {
 					}
 
 				}
-				System.out.println("\nCasos sos en sector 2: " + format.format(cantidadDeCasos2));
+				System.out.println("\nCasos sospechosos en sector 2: " + format.format(cantidadDeCasos2));
 			}
 
 				break;
 			case 3: {
-
-				System.out.println("Cantidad de empleados?: ");
-
-				totalDeEmpleadosSector3 = scan.nextInt();
 
 				for (int j = 0; j <= totalDeEmpleadosSector3; j++) {
 
@@ -116,7 +111,7 @@ public class Main {
 
 					}
 				}
-				System.out.println("\nCasos positivos en sector 3: " + format.format(cantidadDeCasos3));
+				System.out.println("\nCasos sospechosos en sector 3: " + format.format(cantidadDeCasos3));
 			}
 				break;
 			}
@@ -136,7 +131,7 @@ public class Main {
 				"\nEl sector 3 tiene: " + format.format(porcentajeDeCasos3) + " % de empleados con sospecha de COVID");
 
 		System.out.println("\nLa fabrica tiene " + format.format((casosGenerales / EMPLEADOS) * 100)
-				+ "% empleados sospechosos de " + EMPLEADOS);
+				+ " % de empleados sospechosos de " + EMPLEADOS);
 	}
 
 }
