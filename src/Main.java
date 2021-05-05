@@ -77,9 +77,7 @@ public class Main {
 				break;
 			case 2: {
 
-				System.out.println("Cantidad de empleados?: ");
-
-				totalDeEmpleadosSector2 = scan.nextInt();
+				System.out.println(totalDeEmpleadosSector2);
 
 				for (int j = 0; j <= totalDeEmpleadosSector2; j++) {
 
@@ -100,9 +98,7 @@ public class Main {
 				break;
 			case 3: {
 
-				System.out.println("Cantidad de empleados?: ");
-
-				totalDeEmpleadosSector3 = scan.nextInt();
+				System.out.println(totalDeEmpleadosSector3);
 
 				for (int j = 0; j <= totalDeEmpleadosSector3; j++) {
 
