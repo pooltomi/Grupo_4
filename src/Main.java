@@ -31,18 +31,18 @@ public class Main {
 
 		DecimalFormat format = new DecimalFormat("0.#");
 
-		System.out.println(
-				"Ingrese cantidad de empleados sector 1 recuerde que no puede ser mayor a " + EMPLEADOS + " :");
+		System.out.println("Ingrese cantidad de empleados sector 1 recuerde que no puede ser mayor a "
+				+ format.format(EMPLEADOS) + " :");
 		totalDeEmpleadosSector1 = scan.nextInt();
 		restanEmpleados = (EMPLEADOS - totalDeEmpleadosSector1);
 
-		System.out.println(
-				"Ingrese cantidad de empleados sector 2 recuerde quen no puede ser mayor a " + restanEmpleados + " :");
+		System.out.println("Ingrese cantidad de empleados sector 2 recuerde quen no puede ser mayor a "
+				+ format.format(restanEmpleados) + " :");
 		totalDeEmpleadosSector2 = scan.nextInt();
 		restanEmpleados = (restanEmpleados - totalDeEmpleadosSector2);
 
-		System.out.println(
-				"Ingrese cantidad de empleados sector 3 recuerde quen no puede ser mayor a " + restanEmpleados + " :");
+		System.out.println("Ingrese cantidad de empleados sector 3 recuerde quen no puede ser mayor a "
+				+ format.format(restanEmpleados) + " :");
 		totalDeEmpleadosSector3 = scan.nextInt();
 		restanEmpleados = (restanEmpleados - totalDeEmpleadosSector3);
 
@@ -56,7 +56,7 @@ public class Main {
 			switch (sector) {
 			case 1: {
 
-				System.out.println(totalDeEmpleadosSector1);
+				System.out.println(format.format(totalDeEmpleadosSector1));
 
 				for (int j = 0; j <= totalDeEmpleadosSector1; j++) {
 
@@ -77,7 +77,7 @@ public class Main {
 				break;
 			case 2: {
 
-				System.out.println(totalDeEmpleadosSector2);
+				System.out.println(format.format(totalDeEmpleadosSector2));
 
 				for (int j = 0; j <= totalDeEmpleadosSector2; j++) {
 
@@ -98,7 +98,7 @@ public class Main {
 				break;
 			case 3: {
 
-				System.out.println(totalDeEmpleadosSector3);
+				System.out.println(format.format(totalDeEmpleadosSector3));
 
 				for (int j = 0; j <= totalDeEmpleadosSector3; j++) {
 
@@ -123,7 +123,7 @@ public class Main {
 		porcentajeDeCasos2 = (double) ((cantidadDeCasos2 / totalDeEmpleadosSector2) * 100);
 		porcentajeDeCasos3 = (double) ((cantidadDeCasos3 / totalDeEmpleadosSector3) * 100);
 
-		System.out.println("\nLa cantidad de casos generales de COVID son: " + casosGenerales);
+		System.out.println("\nLa cantidad de casos generales de COVID son: " + format.format(casosGenerales));
 		System.out.println(
 				"\nEl sector 1 tiene: " + format.format(porcentajeDeCasos1) + " % de empleados con sospecha de COVID");
 		System.out.println(
@@ -132,7 +132,7 @@ public class Main {
 				"\nEl sector 3 tiene: " + format.format(porcentajeDeCasos3) + " % de empleados con sospecha de COVID");
 
 		System.out.println("\nLa fabrica tiene " + format.format((casosGenerales / EMPLEADOS) * 100)
-				+ "% empleados sospechosos de " + EMPLEADOS);
+				+ " % empleados sospechosos de " + format.format(EMPLEADOS));
 	}
 
 }
