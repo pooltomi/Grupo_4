@@ -31,12 +31,19 @@ public class Main {
 
 		DecimalFormat format = new DecimalFormat("0.#");
 
-		System.out.println("Total Empleados Fabrica " + format.format(EMPLEADOS));
+		System.out.println("\nTotal Empleados Fabrica " + format.format(EMPLEADOS));
 
-		System.out.println("Ingrese cantidad de empleados sector 1 : "); // recuerde que no puede ser mayor a "
+		System.out.println("\nIngrese cantidad de empleados sector 1 : "); // recuerde que no puede ser mayor a "
 		// + format.format(EMPLEADOS) + " :");
 		totalDeEmpleadosSector1 = scan.nextInt();
 		scan.nextLine();
+		while (totalDeEmpleadosSector1 > EMPLEADOS) {
+			System.out.println("\nEl maximo de Empleados a ingresar es 50");
+			System.out.println("\nIngrese cantidad de empleados sector 1 : "); // recuerde que no puede ser mayor a "
+			// + format.format(EMPLEADOS) + " :");
+			totalDeEmpleadosSector1 = scan.nextInt();
+			scan.nextLine();
+		}
 		if (totalDeEmpleadosSector1 <= EMPLEADOS) {
 
 			restanEmpleados = (EMPLEADOS - totalDeEmpleadosSector1);
@@ -44,10 +51,19 @@ public class Main {
 			if ((restanEmpleados != 0)) {
 
 				if ((restanEmpleados != 0)) {
-					System.out.println("Ingrese cantidad de empleados sector 2  : "); // recuerde que no puede ser mayor
+					System.out.println("\nIngrese cantidad de empleados sector 2  : "); // recuerde que no puede ser
+																						// mayor
 																						// a "
 					// + format.format(restanEmpleados) + " :");
 					totalDeEmpleadosSector2 = scan.nextInt();
+					while (totalDeEmpleadosSector2 > restanEmpleados) {
+						System.out.println("\nEl maximo de Empleados a ingresar es " + format.format(restanEmpleados));
+						System.out.println("\nIngrese cantidad de empleados sector 2 : "); // recuerde que no puede ser
+																							// mayor a "
+						// + format.format(EMPLEADOS) + " :");
+						totalDeEmpleadosSector2 = scan.nextInt();
+						scan.nextLine();
+					}
 
 					if ((totalDeEmpleadosSector2 <= restanEmpleados)) {
 
@@ -55,12 +71,22 @@ public class Main {
 
 						if ((restanEmpleados != 0)) {
 
-							System.out.println("Ingrese cantidad de empleados sector 3 : "); // recuerde que no puede
+							System.out.println("\nIngrese cantidad de empleados sector 3 : "); // recuerde que no puede
 																								// ser
 																								// mayor
 																								// a "
 							// + format.format(restanEmpleados) + " :");
 							totalDeEmpleadosSector3 = scan.nextInt();
+							while (totalDeEmpleadosSector3 > restanEmpleados) {
+								System.out.println(
+										"\nEl maximo de Empleados a ingresar es " + format.format(restanEmpleados));
+								System.out.println("\nIngrese cantidad de empleados sector 3 : "); // recuerde que no
+																									// puede ser mayor a
+																									// "
+								// + format.format(EMPLEADOS) + " :");
+								totalDeEmpleadosSector3 = scan.nextInt();
+								scan.nextLine();
+							}
 							if ((restanEmpleados != 0) && totalDeEmpleadosSector3 <= restanEmpleados) {
 
 								restanEmpleados = (restanEmpleados - totalDeEmpleadosSector3);
@@ -115,8 +141,8 @@ public class Main {
 					break;
 				case 2: {
 
-					System.out
-							.println("Cantidad de empleados en el sector : " + format.format(totalDeEmpleadosSector2));
+					System.out.println(
+							"Cantidad de empleados en el sector 2 : " + format.format(totalDeEmpleadosSector2));
 
 					if (totalDeEmpleadosSector2 <= EMPLEADOS) {
 						for (int j = 1; j <= totalDeEmpleadosSector2; j++) {
@@ -139,8 +165,8 @@ public class Main {
 					break;
 				case 3: {
 
-					System.out
-							.println("Cantidad de empleados en el sector : " + format.format(totalDeEmpleadosSector3));
+					System.out.println(
+							"Cantidad de empleados en el sector 3 : " + format.format(totalDeEmpleadosSector3));
 
 					if (totalDeEmpleadosSector3 <= EMPLEADOS) {
 						for (int j = 1; j <= totalDeEmpleadosSector3; j++) {
